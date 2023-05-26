@@ -1,4 +1,4 @@
-FROM doug260188/ubuntu:latest
+FROM ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
