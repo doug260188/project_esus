@@ -20,7 +20,7 @@ RUN apt-get install openjdk-8-jdk -y
 ENV PEC_FOLDER mkdir -p /var/lock/subsys/ && service e-SUS-AB-PostgreSQL restart && service e-SUS-AB-PostgreSQL start 
 
 #PEC INSTALL
-RUN wget hhttps://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O pec.jar
+RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O pec.jar
 RUN chmod 777 pec.jar
 RUN mv pec.jar /home/PEC/install
 WORKDIR /home/PEC/install
