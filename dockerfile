@@ -16,13 +16,11 @@ RUN apt install wget -y
 #INSTALL PACKAGES
 RUN apt-get install openjdk-8-jdk -y
 
-#IMAGE VARIABLES
-ENV PEC_FOLDER mkdir -p /var/lock/subsys/ && service e-SUS-AB-PostgreSQL restart && service e-SUS-AB-PostgreSQL start 
 
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O pec.jar
 RUN chmod 777 pec.jar
-RUN mv pec.jar /home/PEC/
+RUN cp pec.jar /home/PEC/
 WORKDIR /home/PEC/
 
 #LOCALE PT_BR
@@ -37,4 +35,4 @@ RUN sh instalador_linux.sh
 
 WORKDIR /
 
-ENTRYPOINT ENTRYPOINT ["java", "-jar", "/home/PEC/pec.jar"]
+ENTRYPOINT ["java", "-jar", "/home/PEC/pec.jar"]
