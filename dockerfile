@@ -12,6 +12,7 @@ WORKDIR /home/PEC
 RUN apt update
 RUN apt upgrade -y
 RUN apt install wget -y
+RUN apt install curl -y
 
 #INSTALL PACKAGES
 RUN apt-get install openjdk-8-jdk -y
