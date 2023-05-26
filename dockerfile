@@ -20,8 +20,8 @@ RUN apt-get install openjdk-8-jdk -y
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN chmod 777 eSUS-AB-PEC-5.1.17-Linux64.jar
-RUN mv eSUS-AB-PEC-5.1.17-Linux64.jar /home/PEC/
-WORKDIR /home/PEC/
+#RUN mv eSUS-AB-PEC-5.1.17-Linux64.jar /home/PEC/
+#WORKDIR /home/PEC/
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/master/locale #redo
@@ -35,4 +35,4 @@ RUN sh instalador_linux.sh
 
 WORKDIR /
 
-ENTRYPOINT ["java", "-jar", "/home/PEC/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar"]
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar"]
