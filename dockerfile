@@ -37,4 +37,4 @@ RUN sh instalador_linux.sh
 
 WORKDIR /
 
-ENTRYPOINT mkdir -p /var/lock/subsys/ && service e-SUS-AB-PostgreSQL restart && service e-SUS-AB-PostgreSQL start && java -jar /home/PEC/pec.jar ; /bin/bash
+ENTRYPOINT ENTRYPOINT ["java", "-jar", "/home/PEC/pec.jar"]
