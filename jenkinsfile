@@ -7,8 +7,8 @@ pipeline {
                 script {
                     //Baixando dockerfile
                     sh 'wget https://github.com/doug260188/project_esus/blob/master/dockerfile'
-                    sh 'chmod 777 dockerfile'
-                    
+                    sh 'chmod 777 dockerfile*'
+
                     //Construindo imagem
                     sh 'docker build -t ubuntu:latest .'
                 }
