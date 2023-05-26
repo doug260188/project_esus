@@ -2,11 +2,29 @@ pipeline {
     agent any
 
     stages {
+        stage('Build Image') {
+            steps {
+                script {
+                    //Baixando dockerfile
+                    sh 'wget https://github.com/doug260188/project_esus/blob/master/Dockerfile'
+
+                    //Construindo imagem
+                    sh 'docker build -t doug260188/ubuntu:latest .'
+                }
+            }
+        
+
+        }
+
         stage('Run Container') {
             steps {
-                sh 'export PATH=$PATH:/usr/bin'
-                sh 'docker-compose up -d https://raw.githubusercontent.com/doug260188/project_esus/master/docker-compose.yml'
+                // Baixando imagem
+                sh 'wget https://github.com/doug260188/project_esus/blob/main/docker-compose.yml'
+
+                //Subindo container
+                sh 'docker-compose up -d'
             }
         }
     }
+                
 }
