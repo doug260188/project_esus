@@ -1,11 +1,11 @@
-FROM lissonpsantos2/debian-jessie-basic:latest
+FROM doug260188/ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
 #CREATE PEC FOLDER
 RUN mkdir /home/PEC
 
-#SET WORKDIR PEC 3.0 FOLDER
+#SET WORKDIR PEC FOLDER
 WORKDIR /home/PEC
 
 #UPDATE IMAGE
