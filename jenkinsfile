@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     //Baixando dockerfile
-                    sh 'wget https://github.com/doug260188/project_esus/tree/master/Dockerfile'
+                    sh 'wget https://github.com/doug260188/project_esus/blob/master/dockerfile'
 
                     //Construindo imagem
                     sh 'docker build -t doug260188/ubuntu:latest .'
@@ -19,7 +19,7 @@ pipeline {
         stage('Run Container') {
             steps {
                 // Baixando imagem
-                sh 'wget https://github.com/doug260188/project_esus/tree/main/docker-compose.yml'
+                sh 'wget https://github.com/doug260188/project_esus/blob/master/docker-compose.yml'
 
                 //Subindo container
                 sh 'docker-compose up -d'
