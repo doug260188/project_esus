@@ -1,5 +1,12 @@
 pipeline {
-    agent any {
-        
+    agent any
+
+    stages {
+        stage('Run Container') {
+            steps {
+                sh 'export PATH=$PATH:/usr/bin'
+                sh 'docker-compose up -d https://raw.githubusercontent.com/doug260188/pec-docker-image/main/docker-compose.yml'
+            }
+        }
     }
 }
