@@ -26,7 +26,7 @@ RUN ls -ltr ; pwd
 #WORKDIR /home/PEC/
 
 #LOCALE PT_BR
-RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
+#RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
 
 #JAVA.CONF FILE
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
