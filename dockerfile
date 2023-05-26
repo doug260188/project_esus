@@ -22,8 +22,8 @@ ENV PEC_FOLDER mkdir -p /var/lock/subsys/ && service e-SUS-AB-PostgreSQL restart
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O pec.jar
 RUN chmod 777 pec.jar
-RUN mv pec.jar /home/PEC/install
-WORKDIR /home/PEC/install
+RUN mv pec.jar /home/PEC/
+WORKDIR /home/PEC/
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/master/locale #redo
