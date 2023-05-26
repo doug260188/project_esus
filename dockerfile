@@ -18,7 +18,7 @@ RUN apt-get install openjdk-8-jdk -y
 
 
 #PEC INSTALL
-RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O pec.jar
+RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN chmod 777 eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN mv eSUS-AB-PEC-5.1.17-Linux64.jar /home/PEC/
 WORKDIR /home/PEC/
