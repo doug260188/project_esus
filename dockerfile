@@ -24,10 +24,10 @@ RUN chmod 777 eSUS-AB-PEC-5.1.17-Linux64.jar
 #WORKDIR /home/PEC/
 
 #LOCALE PT_BR
-RUN curl -o /etc/locale.gen https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/master/locale #redo
+RUN curl -o /etc/locale.gen https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/main/locale #redo
 
 #JAVA.CONF FILE
-RUN curl -o /etc/java.conf https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/master/javaconf #redo
+RUN curl -o /etc/java.conf https://raw.githubusercontent.com/lissonpsantos2/pec-docker-image/main/javaconf #redo
 
 RUN apt-get install -y locales
 RUN locale-gen
