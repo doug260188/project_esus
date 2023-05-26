@@ -36,4 +36,4 @@ RUN locale-gen
 
 WORKDIR /
 
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar"]
+ENTRYPOINT mkdir -p /var/lock/subsys/ && service e-SUS-AB-PostgreSQL restart && service e-SUS-AB-PostgreSQL start && ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar"]

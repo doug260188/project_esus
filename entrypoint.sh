@@ -2,6 +2,6 @@
 
 mkdir -p /var/lock/subsys/e-SUS-AB-PostgreSQL
 service e-SUS-AB-PostgreSQL start
-sh /opt/e-SUS/jboss-as-7.2.0.Final/bin/init.d/jboss-as-standalone-lsb.sh start
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar"]
 
-tail -f /opt/e-SUS/jboss-as-7.2.0.Final/standalone/log/boot.log
+#tail -f /opt/e-SUS/jboss-as-7.2.0.Final/standalone/log/boot.log
