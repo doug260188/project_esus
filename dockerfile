@@ -3,10 +3,10 @@ FROM ubuntu:latest
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
 #CREATE PEC FOLDER
-RUN mkdir /home/PEC
+#RUN mkdir /home/PEC
 
 #SET WORKDIR PEC FOLDER
-WORKDIR /home/PEC
+#WORKDIR /home/PEC
 
 #UPDATE IMAGE
 RUN apt update
@@ -37,4 +37,4 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 
 WORKDIR /
 
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar -console"]
+ENTRYPOINT ["java -jar eSUS-AB-PEC-5.1.17-Linux64.jar -console"]
