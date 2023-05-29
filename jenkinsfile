@@ -23,7 +23,7 @@ pipeline {
 
                 //Subindo container
                 sh 'docker-compose up -d'
-                sh 'rm docker-compose'
+                sh 'rm docker-compose.yml.*'
             }
         }
     }
