@@ -1,7 +1,7 @@
 version: '2'
 services:
   pec-app:
-    image: ubuntu:latest
+    image: doug260188/ubuntu:latest
     restart: always
     volumes:
       - ./:/pec-docker/

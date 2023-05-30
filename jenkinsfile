@@ -9,8 +9,8 @@ pipeline {
                     sh 'wget https://github.com/doug260188/project_esus/blob/master/dockerfile'
 
                     //Construindo imagem
-                    sh 'docker build -t ubuntu:latest .'
-                    sh ' rm dockerfile.*'
+                    sh 'docker build -t doug260188/ubuntu:latest .'
+                    sh ' rm dockerfile*'
                 }
             }
         
@@ -24,7 +24,7 @@ pipeline {
 
                 //Subindo container
                 sh 'docker-compose up -d'
-                sh 'rm docker-compose.yml.*'
+                sh 'rm docker-compose.ym*'
             }
         }
     }
