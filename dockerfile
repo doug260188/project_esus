@@ -2,13 +2,7 @@ FROM ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
-#CREATE PEC FOLDER
-#RUN mkdir /home/PEC
-
-#SET WORKDIR PEC FOLDER
-#WORKDIR /home/PEC
-#ENV "java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","--confirm"
-
+ENV CONFIRM_ACTION=true
 
 #UPDATE IMAGE
 RUN apt update
@@ -28,7 +22,7 @@ RUN ls -ltr ; pwd
 #WORKDIR /home/PEC/
 
 #LOCALE PT_BR
-#RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
+RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
 
 #JAVA.CONF FILE
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
