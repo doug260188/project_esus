@@ -26,7 +26,7 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 
 RUN apt-get install -y locales
 RUN locale-gen
-RUN sh instalador_linux.sh
+#RUN sh instalador_linux.sh
 
 
 #CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
