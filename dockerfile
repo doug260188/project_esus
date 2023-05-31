@@ -2,9 +2,6 @@ FROM ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
-RUN mkdir /home/pec
-WORKDIR /home/pec
-
 #UPDATE IMAGE
 RUN apt update
 RUN apt upgrade -y
@@ -19,9 +16,7 @@ RUN apt-get install openjdk-8-jdk -y
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN chmod +x eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN ls -ltr ; pwd
-RUN mv eSUS-AB-PEC-5.1.17-Linux64.jar /home/pec/
 
-WORKDIR /home/pec/
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
@@ -33,7 +28,6 @@ RUN apt-get install -y locales
 RUN locale-gen
 RUN sh instalador_linux.sh
 
-#WORKDIR /
 
 #CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
 
