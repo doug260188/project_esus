@@ -11,6 +11,6 @@ services:
     tty: true
     entrypoint:
       - bash
-      - "entrypoint.sh"
+      #- "entrypoint.sh"
     working_dir: /pec-docker/
     mem_limit: 2g

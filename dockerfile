@@ -18,6 +18,7 @@ RUN apt-get install openjdk-8-jdk -y
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN chmod +x eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN ls -ltr ; pwd
+RUN java -jar eSUS-AB-PEC-5.1.17-Linux64.jar -console -continue
 
 #WORKDIR /home/PEC/
 
@@ -33,4 +34,4 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 
 #WORKDIR /
 
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue" ; /bin/bash]
+#ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
