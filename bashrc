@@ -4,7 +4,7 @@ echo '$IMAGE_ALIAS'
 
 echo '$INFO_IMAGE'
 
-export PS1="\[$(tput bold)\][\[\e[33m\]debian-PEC\[\e[m\]\[$(tput bold)\]] \[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\$(__git_ps1) # "
+export PS1="\[$(tput bold)\][\[\e[33m\]doug260188/debian\[\e[m\]\[$(tput bold)\]] \[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]\$(__git_ps1) # "
 
 alias ls='ls --color=auto'
 
