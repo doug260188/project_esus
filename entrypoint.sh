@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 mkdir -p /var/lock/subsys/e-SUS-AB-PostgreSQL
 service e-SUS-AB-PostgreSQL start
