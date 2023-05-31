@@ -6,11 +6,11 @@ services:
     volumes:
       - ./:/pec-docker/
     ports:
-      - 8000:8080
+      - 8080:8080
     stdin_open: true
     tty: true
-    entrypoint:
-      - bash
+    #entrypoint:
+      #- bash
       #- "entrypoint.sh"
     working_dir: /pec-docker/
     mem_limit: 2g
