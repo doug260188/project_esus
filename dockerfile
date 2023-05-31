@@ -31,4 +31,4 @@ RUN locale-gen
 
 #CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
 
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue", "/bin/sh"]
