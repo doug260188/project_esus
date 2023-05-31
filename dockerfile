@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM openjdk:8
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
@@ -9,7 +9,7 @@ RUN apt install wget -y
 RUN apt install curl -y
 
 #INSTALL PACKAGES
-RUN apt-get install openjdk-8-jdk -y
+#RUN apt-get install openjdk-8-jdk -y
 
 
 #PEC INSTALL
@@ -31,4 +31,4 @@ RUN locale-gen
 
 #CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
 
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue", "/bin/sh"]
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
