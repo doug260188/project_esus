@@ -33,4 +33,4 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 
 #WORKDIR /
 
-#ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","--confirm"]
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
