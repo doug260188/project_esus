@@ -1,7 +1,7 @@
 version: '2'
 services:
   pec-app:
-    image: doug260188/openjdk:8
+    image: doug260188/debian:latest
     restart: always
     volumes:
       - ./:/pec-docker/
@@ -9,8 +9,8 @@ services:
       - 8084:8080
     stdin_open: true
     tty: true
-    entrypoint:
-      - bash
-      - "entrypoint.sh"
+    #ENTRYPOINT
+    # - bash
+    # - "entrypoint.sh"
     working_dir: /pec-docker/
     mem_limit: 2g

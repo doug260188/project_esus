@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM debian:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
@@ -24,11 +24,7 @@ RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/mast
 #JAVA.CONF FILE
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
 
-RUN apt-get install -y locales
-RUN locale-gen
-#RUN sh instalador_linux.sh
 
+CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
 
-#CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
-
-ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
+#ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
