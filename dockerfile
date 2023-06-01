@@ -3,7 +3,7 @@ FROM debian:latest
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
 #UPDATE IMAGE
-RUN apt update && apk add bash
+RUN apt update && apt install -y bash
 RUN apt upgrade -y
 RUN apt install nano -y
 RUN apt install wget -y
