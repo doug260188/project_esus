@@ -9,7 +9,7 @@ RUN apt install wget -y
 RUN apt install curl -y
 
 #INSTALL PACKAGES
-#RUN apt-get install openjdk-8-jdk -y
+RUN apt-get install openjdk-8-jdk -y
 
 
 #PEC INSTALL
