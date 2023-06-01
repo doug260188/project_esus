@@ -2,6 +2,10 @@ FROM debian:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
+MKDIR /app
+
+WORKDIR /app
+
 #UPDATE IMAGE
 RUN apt update && apt install -y bash
 RUN apt upgrade -y
