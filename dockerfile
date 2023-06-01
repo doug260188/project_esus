@@ -26,6 +26,6 @@ RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/mast
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
 
 
-CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
+#CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar" "-console", "-continue"]
 
-#ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
+ENTRYPOINT ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console","-continue"]
