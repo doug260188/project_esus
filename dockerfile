@@ -7,7 +7,7 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN yum update -y
+RUN yum update
 RUN yum upgrade -y
 RUN yum install nano -y
 RUN yum install wget -y
