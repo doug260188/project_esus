@@ -23,7 +23,7 @@ RUN chmod +x eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN ls -ltr ; pwd
 
 # Copie a aplicação para o contêiner
-RUN mv eSUS-AB-PEC-5.1.17-Linux64.jar /app/
+COPY eSUS-AB-PEC-5.1.17-Linux64.jar /app/
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
