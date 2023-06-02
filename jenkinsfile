@@ -9,7 +9,7 @@ pipeline {
                     sh 'wget https://github.com/doug260188/project_esus/blob/master/dockerfile'
 
                     //Construindo imagem
-                    sh 'docker build -t doug260188/centos:7 .'
+                    sh 'docker build -t doug260188/ubuntu:latest .'
                     sh ' rm dockerfile*'
                 }
             }

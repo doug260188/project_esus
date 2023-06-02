@@ -1,4 +1,4 @@
-FROM centos:7
+FROM ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
@@ -7,15 +7,14 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN yum update -y
-RUN yum upgrade -y
-RUN yum install nano -y
-RUN yum install wget -y
-RUN yum install curl -y
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install nano -y
+RUN apt install wget -y
+RUN apt install curl -y
 
 #INSTALL PACKAGES
-RUN yum install java 8 -y
-
+RUN apt install 0penjdk-8-jre
 
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O esus.jar
