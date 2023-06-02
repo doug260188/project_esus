@@ -7,15 +7,14 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN apt-get clean
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install nano -y
-RUN apt-get install wget -y
-RUN apt-get install curl -y
+RUN yum update
+RUN yum upgrade -y
+RUN yum install nano -y
+RUN yum install wget -y
+RUN yum install curl -y
 
 #INSTALL PACKAGES
-RUN apt-get install openjdk-11-jdk -y
+RUN yum install openjdk-11-jdk -y
 
 
 #PEC INSTALL
