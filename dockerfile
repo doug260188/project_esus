@@ -7,11 +7,11 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN apt update
-RUN apt upgrade -y
-RUN apt install nano -y
-RUN apt install wget -y
-RUN apt install curl -y
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install nano -y
+RUN apt-get install wget -y
+RUN apt-get install curl -y
 
 #INSTALL PACKAGES
 RUN apt-get install openjdk-11-jdk -y
