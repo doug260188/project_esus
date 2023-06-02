@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:8
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
