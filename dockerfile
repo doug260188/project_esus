@@ -18,7 +18,7 @@ RUN apt-get install openjdk-11-jdk -y
 
 
 #PEC INSTALL
-RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -0 esus.jar
+RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O esus.jar
 RUN chmod +x esus.jar
 RUN ls -ltr ; pwd
 
