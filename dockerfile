@@ -23,7 +23,7 @@ RUN chmod +x eSUS-AB-PEC-5.1.17-Linux64.jar
 RUN ls -ltr ; pwd
 
 # Copie a aplicação para o contêiner
-COPY eSUS-AB-PEC-5.1.17-Linux64.jar app/
+COPY eSUS-AB-PEC-5.1.17-Linux64.jar /app/
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
@@ -32,7 +32,7 @@ RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/mast
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
 
 # Define o diretório de trabalho
-WORKDIR /app
+WORKDIR /app/
 
 # Comando para executar a aplicação
 CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console", "-continue"]
