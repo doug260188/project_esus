@@ -1,7 +1,7 @@
 version: '2'
 services:
   pec-app:
-    image: doug260188/centos:7
+    image: doug260188/centos:latest
     restart: always
     volumes:
       - ./:/pec-docker/

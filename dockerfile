@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
