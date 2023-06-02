@@ -2,7 +2,7 @@ FROM debian:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
-RUN mkdir /app
+RUN mkdir app/
 
 WORKDIR /app
 
