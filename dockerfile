@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
@@ -7,15 +7,14 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN dnf update -y
-
-RUN dnf upgrade -y
-RUN dnf install nano -y
-RUN dnf install wget -y
-RUN dnf install curl -y
+RUN yum update -y
+RUN yum upgrade -y
+RUN yum install nano -y
+RUN yum install wget -y
+RUN yum install curl -y
 
 #INSTALL PACKAGES
-RUN dnf install java 8 -y
+RUN yum install java 8 -y
 
 
 #PEC INSTALL
