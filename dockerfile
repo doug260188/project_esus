@@ -14,7 +14,7 @@ RUN apt install wget -y
 RUN apt install curl -y
 
 #INSTALL PACKAGES
-RUN apt install 0penjdk-8-jre
+RUN apt install 0penjdk-8-jre -y
 
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O esus.jar
