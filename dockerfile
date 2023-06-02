@@ -2,9 +2,9 @@ FROM ubuntu:latest
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
-RUN mkdir app/
+#RUN mkdir app/
 
-WORKDIR /app
+#WORKDIR /app
 
 #UPDATE IMAGE
 RUN apt update -y
@@ -32,7 +32,7 @@ RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/mast
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
 
 # Define o diretório de trabalho
-WORKDIR /app
+#WORKDIR /app
 
 # Comando para executar a aplicação
 CMD ["java", "-jar", "esus.jar", "-console", "-continue"]
