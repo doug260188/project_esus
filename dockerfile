@@ -1,4 +1,4 @@
-FROM debian:8
+FROM centos:7
 
 LABEL maintainer Rodrigo Silva Rodrigues <rsrodrigues.88@hotmail.com>
 
