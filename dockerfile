@@ -18,12 +18,12 @@ RUN apt-get install openjdk-11-jdk -y
 
 
 #PEC INSTALL
-RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar
-RUN chmod +x eSUS-AB-PEC-5.1.17-Linux64.jar
+RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -0 esus.jar
+RUN chmod +x esus.jar
 RUN ls -ltr ; pwd
 
 # Copie a aplicação para o contêiner
-COPY eSUS-AB-PEC-5.1.17-Linux64.jar /app/
+COPY esus.jar /app
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
@@ -32,7 +32,7 @@ RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/mast
 RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/master/javaconf #redo
 
 # Define o diretório de trabalho
-WORKDIR /app/
+WORKDIR /app
 
 # Comando para executar a aplicação
-CMD ["java", "-jar", "eSUS-AB-PEC-5.1.17-Linux64.jar", "-console", "-continue"]
+CMD ["java", "-jar", "esus.jar", "-console", "-continue"]
