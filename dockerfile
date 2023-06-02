@@ -14,7 +14,7 @@ RUN yum install wget -y
 RUN yum install curl -y
 
 #INSTALL PACKAGES
-RUN yum install openjdk-8-jdk -y
+RUN yum install java 8 -y
 
 
 #PEC INSTALL
