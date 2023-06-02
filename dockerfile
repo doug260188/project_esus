@@ -7,14 +7,14 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-#RUN yum update
-RUN yum upgrade -y
-RUN yum install nano -y
-RUN yum install wget -y
-RUN yum install curl -y
+RUN dnf update
+RUN dnf upgrade -y
+RUN dnf install nano -y
+RUN dnf install wget -y
+RUN dnf install curl -y
 
 #INSTALL PACKAGES
-RUN yum install java 8 -y
+RUN dnf install java 8 -y
 
 
 #PEC INSTALL
