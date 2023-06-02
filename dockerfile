@@ -23,7 +23,7 @@ RUN chmod +x esus.jar
 RUN ls -ltr ; pwd
 
 # Copie a aplicação para o contêiner
-COPY esus.jar /app
+RUN cp esus.jar /app
 
 #LOCALE PT_BR
 RUN curl -o /etc/locale.gen https://github.com/doug260188/project_esus/blob/master/locale #redo
