@@ -7,6 +7,7 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install nano -y
