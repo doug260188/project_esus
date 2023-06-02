@@ -7,7 +7,7 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN apt update && apt install -y bash
+RUN apt update
 RUN apt upgrade -y
 RUN apt install nano -y
 RUN apt install wget -y
