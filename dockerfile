@@ -7,7 +7,8 @@ RUN mkdir app/
 WORKDIR /app
 
 #UPDATE IMAGE
-RUN dnf update
+RUN dnf update -y
+
 RUN dnf upgrade -y
 RUN dnf install nano -y
 RUN dnf install wget -y
