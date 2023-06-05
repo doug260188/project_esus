@@ -35,4 +35,4 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 #WORKDIR /app
 
 # Comando para executar a aplicação
-CMD ["java", "-jar", "esus.jar", "-console", "-continue"]
+CMD [/bin/sh -c "java", "-jar", "esus.jar", "-console", "-continue"]
