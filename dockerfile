@@ -12,10 +12,11 @@ RUN apt upgrade -y
 RUN apt install nano -y
 RUN apt install wget -y
 RUN apt install curl -y
-RUN apt install --reinstall bash -y
+
 
 #INSTALL PACKAGES
 RUN apt install openjdk-8-jre -y
+RUN apt install --reinstall bash -y
 
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O esus.jar
