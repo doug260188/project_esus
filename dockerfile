@@ -14,7 +14,7 @@ RUN apt install wget -y
 RUN apt install curl -y
 
 #INSTALL PACKAGES
-RUN apt install openjdk-8-jre -y
+RUN apt install openjdk-11-jre -y
 
 #PEC INSTALL
 RUN wget https://arquivos.esusab.ufsc.br/PEC/vRjsZJgfPyTBUpTy/5.1.17/eSUS-AB-PEC-5.1.17-Linux64.jar -O esus.jar
@@ -35,4 +35,4 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 #WORKDIR /app
 
 # Comando para executar a aplicação
-CMD ["java", "-jar", "esus.jar", "-console", "-continue" /bin/sh -c]
+CMD ["java", "-jar", "esus.jar", "-console", "-continue"]
