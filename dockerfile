@@ -12,6 +12,7 @@ RUN apt upgrade -y
 RUN apt install nano -y
 RUN apt install wget -y
 RUN apt install curl -y
+RUN apt install --reinstall bash -Y
 
 #INSTALL PACKAGES
 RUN apt install openjdk-8-jre -y
