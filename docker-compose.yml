@@ -10,7 +10,7 @@ services:
     stdin_open: true
     tty: true
     #ENTRYPOINT
-     - bash
+    # - bash
      - "entrypoint.sh"
     working_dir: /pec-docker/
     mem_limit: 4g
