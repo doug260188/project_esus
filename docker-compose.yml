@@ -9,6 +9,6 @@ services:
       - 8084:8080
     stdin_open: true
     tty: true
-    entrypoint: ["entrypoint.sh"]
+    #entrypoint: ["entrypoint.sh"]
     working_dir: /pec-docker/
     mem_limit: 4g
