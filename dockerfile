@@ -38,4 +38,5 @@ RUN curl -o /etc/java.conf https://github.com/doug260188/project_esus/blob/maste
 #WORKDIR /app
 
 # Comando para executar a aplicação
-#CMD ["java", "-jar", "esus.jar", "-console", "-continue"]
+CMD ["java", "-jar", "esus.jar", "-url=localhost:5432/esus", "-username=postgres", "-password=esus", "-console", "-continue"]
+#java -jar eSUS-AB-PEC-5.1.17-Linux64.jar -url=localhost:5432/esus -username=postgres -password=esus -console -continue
