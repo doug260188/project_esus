@@ -1,9 +1,9 @@
 version: '2'
 networks:
-   esus-net:
+  esus-net:
     driver: bridge
 
- services:
+services:
   db:
     container_name: postgres
     image: postgres:ubuntu
