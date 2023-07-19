@@ -15,10 +15,7 @@ services:
       - '5432:5432'
     volumes: 
       - db:/var/lib/postgresql/data
-volumes:
-  db:
-  
-  
+
   pec-app:
     image: ubuntu:latest
     restart: always
@@ -32,4 +29,7 @@ volumes:
     working_dir: /pec-docker/
     mem_limit: 4g
     depends_on:
-     - postgres
+      - db
+
+volumes:
+  db:
