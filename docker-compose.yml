@@ -1,5 +1,24 @@
 version: '2'
-services:
+networks:
+   esus-net:
+    driver: bridge
+
+ services:
+  db:
+    container_name: postgres
+    image: postgres:ubuntu
+    restart: always
+    environment: 
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=esus
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+  
+  
   pec-app:
     image: ubuntu:latest
     restart: always
@@ -12,3 +31,5 @@ services:
     #entrypoint: ["entrypoint.sh"]
     working_dir: /pec-docker/
     mem_limit: 4g
+    depends_on:
+     - postgres
